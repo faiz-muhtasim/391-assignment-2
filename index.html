@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Tasks</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 250px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-icon {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+
+        .card-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .card:hover .card-button {
+            transform: scale(1.05);
+        }
+
+        .card-button:active {
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .card {
+                padding: 30px;
+                min-height: 220px;
+            }
+
+            .card-icon {
+                font-size: 3em;
+            }
+
+            .card h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Assignment Tasks</h1>
+            <p>Click on any task to view the submission</p>
+        </div>
+
+        <div class="cards-grid">
+            <a href="https://faiz-muhtasim.github.io/fortune-generator/" class="card" target="_blank">
+                <div class="card-icon">🔮</div>
+                <h2>Question 1</h2>
+                <p>Fortune Generator</p>
+                <button class="card-button">View Task</button>
+            </a>
+
+            <a href="https://faiz-muhtasim.github.io/weird-stopwatch/" class="card" target="_blank">
+                <div class="card-icon">⏱️</div>
+                <h2>Question 2</h2>
+                <p>Weird Stopwatch</p>
+                <button class="card-button">View Task</button>
+            </a>
+
+            <a href="https://faiz-muhtasim.github.io/Fun-To-Do-list/?nocache=1" class="card" target="_blank">
+                <div class="card-icon">✓</div>
+                <h2>Question 3</h2>
+                <p>Fun To-Do List</p>
+                <button class="card-button">View Task</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

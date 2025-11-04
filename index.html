@@ -55,15 +55,13 @@
             border-radius: 15px;
             padding: 40px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
             transition: all 0.3s ease;
-            text-decoration: none;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            min-height: 250px;
+            min-height: 300px;
         }
 
         .card:hover {
@@ -85,7 +83,19 @@
         .card p {
             color: #666;
             font-size: 1em;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            width: 100%;
+            flex-wrap: wrap;
         }
 
         .card-button {
@@ -99,14 +109,25 @@
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
+            text-decoration: none;
         }
 
-        .card:hover .card-button {
+        .card-button:hover {
             transform: scale(1.05);
         }
 
         .card-button:active {
             transform: scale(0.95);
+        }
+
+        .card-button.secondary {
+            background: #e0e0e0;
+            color: #333;
+            border: 2px solid #667eea;
+        }
+
+        .card-button.secondary:hover {
+            background: #d0d0d0;
         }
 
         @media (max-width: 768px) {
@@ -121,7 +142,7 @@
 
             .card {
                 padding: 30px;
-                min-height: 220px;
+                min-height: 280px;
             }
 
             .card-icon {
@@ -130,6 +151,15 @@
 
             .card h2 {
                 font-size: 1.5em;
+            }
+
+            .button-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .card-button {
+                width: 100%;
             }
         }
     </style>
@@ -142,26 +172,35 @@
         </div>
 
         <div class="cards-grid">
-            <a href="https://faiz-muhtasim.github.io/fortune-generator/" class="card" target="_blank">
+            <div class="card">
                 <div class="card-icon">🔮</div>
                 <h2>Question 1</h2>
                 <p>Fortune Generator</p>
-                <button class="card-button">View Task</button>
-            </a>
+                <div class="button-group">
+                    <a href="https://faiz-muhtasim.github.io/fortune-generator/" class="card-button" target="_blank">View Task</a>
+                    <a href="https://github.com/faiz-muhtasim/fortune-generator" class="card-button secondary" target="_blank">Source Code</a>
+                </div>
+            </div>
 
-            <a href="https://faiz-muhtasim.github.io/weird-stopwatch/" class="card" target="_blank">
+            <div class="card">
                 <div class="card-icon">⏱️</div>
                 <h2>Question 2</h2>
                 <p>Weird Stopwatch</p>
-                <button class="card-button">View Task</button>
-            </a>
+                <div class="button-group">
+                    <a href="https://faiz-muhtasim.github.io/weird-stopwatch/" class="card-button" target="_blank">View Task</a>
+                    <a href="https://github.com/faiz-muhtasim/weird-stopwatch" class="card-button secondary" target="_blank">Source Code</a>
+                </div>
+            </div>
 
-            <a href="https://faiz-muhtasim.github.io/Fun-To-Do-list/?nocache=1" class="card" target="_blank">
+            <div class="card">
                 <div class="card-icon">✓</div>
                 <h2>Question 3</h2>
                 <p>Fun To-Do List</p>
-                <button class="card-button">View Task</button>
-            </a>
+                <div class="button-group">
+                    <a href="https://faiz-muhtasim.github.io/Fun-To-Do-list/?nocache=1" class="card-button" target="_blank">View Task</a>
+                    <a href="https://github.com/faiz-muhtasim/Fun-To-Do-list" class="card-button secondary" target="_blank">Source Code</a>
+                </div>
+            </div>
         </div>
     </div>
 </body>
